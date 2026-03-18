@@ -1,16 +1,97 @@
-# React + Vite
+# Sam Fitness Club — Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, fully responsive fitness club website built for **Panthers Fitness Club, Bengaluru**. Designed with a dark, high-energy aesthetic using React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [professional-fitness-website.vercel.app](https://professional-fitness-website.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-  Lightning fast with Vite + React
+-  Dark theme with orange gradient branding
+-  Fully responsive — Mobile, Tablet & Desktop
+-  Smooth scroll navigation
+-  Contact form connected to Google Sheets via Apps Script
+-  Sections: Hero, Programs, Trainers, Pricing, Contact, Footer
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Tech Stack
+
+| Technology | Usage |
+|---|---|
+| React 18 | UI Framework |
+| Vite | Build Tool |
+| Tailwind CSS v4 | Styling |
+| Google Apps Script | Form Backend |
+| Vercel | Deployment |
+
+---
+
+##  Project Structure
+```
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── Programs.jsx
+│   ├── Trainers.jsx
+│   ├── Pricing.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+##  Getting Started
+
+### Prerequisites
+- Node.js v18+
+- npm
+
+### Installation
+```bash
+# Clone the repo
+git clone https://github.com/kxnekin/ProfessionalFitnessWebsite.git
+
+# Navigate into the project
+cd ProfessionalFitnessWebsite
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+```bash
+npm run build
+```
+
+---
+
+##  Contact Form Setup
+
+The contact form submits to a **Google Sheet** via Google Apps Script.
+
+1. Create a Google Sheet with columns: `Timestamp`, `Name`, `Email`, `Phone`, `Message`
+2. Go to **Extensions → Apps Script** and deploy a web app
+3. Replace the `SCRIPT_URL` in `Contact.jsx` with your deployed script URL
+
+---
+
+
+
+##  Author
+
+**Sameera**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/sameera-b-b-b53bb8327/)
+
+
