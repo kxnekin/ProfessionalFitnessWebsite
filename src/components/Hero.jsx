@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 bg-red-950/40 border border-red-600/40 px-3 sm:px-4 py-1.5 rounded-sm mb-6 sm:mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
           <span className="text-[10px] sm:text-[11px] font-bold tracking-[2px] sm:tracking-[3px] uppercase text-red-400 whitespace-nowrap">
-            Panthers Fitness Club
+            Sam Fitness Club
           </span>
         </div>
 
