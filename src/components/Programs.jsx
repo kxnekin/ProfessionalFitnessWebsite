@@ -2,25 +2,25 @@ const programs = [
   {
     title: "Strength Training",
     desc: "Build muscle, power, and overall strength with structured progressive overload workouts designed for all levels.",
-    icon: "🏋️",
+    icon: "",
     tag: "Muscle & Power",
   },
   {
     title: "Personal Training",
     desc: "1-on-1 coaching tailored to your body type, goals, and pace. Your trainer. Your plan. Your results.",
-    icon: "🎯",
+    icon: "",
     tag: "1-on-1 Coaching",
   },
   {
     title: "Fat Loss",
     desc: "Burn fat effectively with a science-backed mix of cardio and strength training that keeps your metabolism firing.",
-    icon: "🔥",
+    icon: "",
     tag: "Body Transformation",
   },
   {
     title: "Cardio Conditioning",
     desc: "Push your limits. Improve stamina, endurance, and heart health with high-energy conditioning circuits.",
-    icon: "⚡",
+    icon: "",
     tag: "Endurance",
   },
 ];
