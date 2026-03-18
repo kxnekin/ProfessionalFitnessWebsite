@@ -1,4 +1,4 @@
-# 🐆 Panthers Fitness Club — Official Website
+# Sam Fitness Club — Official Website
 
 A modern, fully responsive fitness club website built for **Panthers Fitness Club, Bengaluru**. Designed with a dark, high-energy aesthetic using React, Vite, and Tailwind CSS.
 
@@ -6,18 +6,18 @@ A modern, fully responsive fitness club website built for **Panthers Fitness Clu
 
 ---
 
-## ✨ Features
+##  Features
 
-- ⚡ Lightning fast with Vite + React
-- 🎨 Dark theme with orange gradient branding
-- 📱 Fully responsive — Mobile, Tablet & Desktop
-- 🧭 Smooth scroll navigation
-- 📬 Contact form connected to Google Sheets via Apps Script
-- 🏋️ Sections: Hero, Programs, Trainers, Pricing, Contact, Footer
+-  Lightning fast with Vite + React
+-  Dark theme with orange gradient branding
+-  Fully responsive — Mobile, Tablet & Desktop
+-  Smooth scroll navigation
+-  Contact form connected to Google Sheets via Apps Script
+-  Sections: Hero, Programs, Trainers, Pricing, Contact, Footer
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Usage |
 |---|---|
@@ -29,7 +29,7 @@ A modern, fully responsive fitness club website built for **Panthers Fitness Clu
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 src/
 ├── components/
@@ -47,7 +47,7 @@ src/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js v18+
@@ -77,7 +77,7 @@ npm run build
 
 ---
 
-## 📬 Contact Form Setup
+##  Contact Form Setup
 
 The contact form submits to a **Google Sheet** via Google Apps Script.
 
@@ -89,7 +89,7 @@ The contact form submits to a **Google Sheet** via Google Apps Script.
 
 
 
-## 👤 Author
+##  Author
 
 **Sameera**
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/sameera-b-b-b53bb8327/)
