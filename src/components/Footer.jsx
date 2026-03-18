@@ -2,7 +2,7 @@ const navLinks = ["home", "programs", "trainers", "pricing", "contact"];
 
 const socials = [
   { label: "Instagram", href: "https://instagram.com", short: "IG" },
-  { label: "WhatsApp", href: "https://wa.me/91XXXXXXXXXX", short: "WA" },
+  { label: "WhatsApp", href: "https://wa.me/9198765432", short: "WA" },
   { label: "Email", href: "mailto:panthersfit@gmail.com", short: "EM" },
 ];
 
@@ -12,7 +12,7 @@ const scrollTo = (id) =>
 export default function Footer() {
   return (
     <footer className="bg-[#060606] relative overflow-hidden">
-      {/* Top gradient border */}
+      {/* Top gradient */}
       <div
         className="h-[2px] w-full"
         style={{
@@ -21,78 +21,32 @@ export default function Footer() {
         }}
       />
 
-      {/* Background orb */}
-      <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] rounded-full opacity-10 blur-[80px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, #ff2d00, transparent)" }}
-      />
-
-      {/* Grid overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,45,0,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,45,0,0.025) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-
       <div className="relative max-w-6xl mx-auto px-6 sm:px-8 pt-16 pb-8">
-        {/* Main grid */}
+        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-14">
-          {/* Col 1 — Brand */}
+          {/* BRAND */}
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
-              <div
-                className="w-10 h-10 flex items-center justify-center text-white font-black text-lg"
-                style={{
-                  background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
-                  clipPath:
-                    "polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)",
-                }}
-              >
-                P
-              </div>
-              <span
-                className="text-2xl"
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  letterSpacing: "2px",
-                }}
-              >
-                <span
-                  style={{
-                    background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  Panthers
-                </span>
-                <span className="text-white ml-1">Fitness</span>
+              <div className="w-10 h-10 flex items-center justify-center text-white font-black text-lg bg-gradient-to-br from-red-600 to-orange-500"></div>
+              <span className="text-2xl font-bold">
+                <span className="text-red-500">Sam</span> Fitness
               </span>
             </div>
 
-            <p className="text-white/35 text-sm leading-relaxed max-w-xs">
-              Built for warriors. No shortcuts, no excuses. Just raw discipline
-              and real transformation.
+            <p className="text-white/40 text-sm max-w-xs">
+              Built for warriors. No shortcuts, no excuses. Just discipline and
+              transformation.
             </p>
 
-            {/* Social buttons */}
-            <div className="flex gap-2 mt-1">
+            {/* SOCIALS */}
+            <div className="flex gap-2 mt-2">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-9 h-9 flex items-center justify-center text-[10px] font-black text-white/40 rounded-sm transition-all duration-300 hover:text-white hover:bg-red-950/20"
-                  style={{
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    clipPath:
-                      "polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%)",
-                  }}
-                  title={s.label}
+                  className="w-9 h-9 flex items-center justify-center text-xs font-bold text-white/50 border border-white/10 hover:text-white hover:bg-red-600/20 transition"
                 >
                   {s.short}
                 </a>
@@ -100,9 +54,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Quick Links */}
+          {/* LINKS */}
           <div>
-            <p className="text-[10px] font-black tracking-[3px] uppercase text-white/25 mb-5">
+            <p className="text-xs font-bold text-white/30 mb-5 uppercase">
               Quick Links
             </p>
             <ul className="space-y-3">
@@ -110,14 +64,8 @@ export default function Footer() {
                 <li key={id}>
                   <button
                     onClick={() => scrollTo(id)}
-                    className="group flex items-center gap-2 text-sm text-white/45 hover:text-white transition-colors duration-300 capitalize"
+                    className="text-white/50 hover:text-white transition capitalize"
                   >
-                    <span
-                      className="w-0 h-px group-hover:w-4 transition-all duration-300"
-                      style={{
-                        background: "linear-gradient(90deg, #ff2d00, #ff6b00)",
-                      }}
-                    />
                     {id}
                   </button>
                 </li>
@@ -125,51 +73,46 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 — Contact Info */}
+          {/* CONTACT */}
           <div>
-            <p className="text-[10px] font-black tracking-[3px] uppercase text-white/25 mb-5">
-              Find Us
+            <p className="text-xs font-bold text-white/30 mb-5 uppercase">
+              Contact
             </p>
-            <ul className="space-y-4">
-              {[
-                { icon: "📍", text: "Panthers FC, Bengaluru, Karnataka" },
-                { icon: "📞", text: "+91 98765 43210" },
-                { icon: "✉️", text: "panthersfit@gmail.com" },
-                { icon: "🕐", text: "Mon–Sat: 5AM – 10PM" },
-              ].map((item) => (
-                <li key={item.text} className="flex items-start gap-3">
-                  <span className="text-sm mt-0.5">{item.icon}</span>
-                  <span className="text-sm text-white/40 leading-snug">
-                    {item.text}
-                  </span>
-                </li>
-              ))}
+            <ul className="space-y-3 text-white/50 text-sm">
+              <li>📍 Sam Fitness, Bengaluru</li>
+              <li>📞 +91 98765 43210</li>
+              <li>✉️ samFitness@gmail.com</li>
+              <li>🕐 Mon–Sat: 5AM – 10PM</li>
             </ul>
           </div>
         </div>
 
-        {/* Divider */}
-        <div
-          className="h-px w-full mb-6"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent)",
-          }}
-        />
+        {/* DIVIDER */}
+        <div className="border-t border-white/10 mb-6" />
 
-        {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[11px] text-white/20 tracking-widest uppercase">
-            © {new Date().getFullYear()} Panthers Fitness Club. All Rights
-            Reserved.
+        {/* BOTTOM */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/30">
+          <p>
+            © {new Date().getFullYear()} Sam Fitness Club. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[10px] text-white/20 tracking-[2px] uppercase">
-              Open Today · 5AM–10PM
-            </span>
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            Open Today · 5AM–10PM
           </div>
+        </div>
+
+        {/* CREDIT */}
+        <div className="mt-6 flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/sameera-b-b-b53bb8327/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs text-white/30 hover:text-white transition"
+          >
+            Designed & Developed by{" "}
+            <span className="text-red-500">Sameera</span>
+          </a>
         </div>
       </div>
     </footer>

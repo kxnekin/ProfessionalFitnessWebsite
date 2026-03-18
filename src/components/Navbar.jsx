@@ -34,16 +34,15 @@ export default function Navbar() {
         }}
       />
 
-      {/* DESKTOP NAV */}
-      <div className="hidden md:grid grid-cols-3 items-center px-10 py-4">
+      {/* DESKTOP NAV — only on lg+ (1024px+) */}
+      <div className="hidden lg:grid grid-cols-3 items-center px-10 py-4">
         {/* LEFT — Brand */}
         <div
           onClick={() => scrollToSection("home")}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          {/* Icon mark */}
           <div
-            className="w-9 h-9 flex items-center justify-center text-white font-black text-base"
+            className="w-9 h-9 flex items-center justify-center text-white font-black text-base flex-shrink-0"
             style={{
               background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
               clipPath:
@@ -57,7 +56,7 @@ export default function Navbar() {
               fontFamily: "'Bebas Neue', sans-serif",
               letterSpacing: "2px",
             }}
-            className="text-2xl"
+            className="text-2xl whitespace-nowrap"
           >
             <span
               style={{
@@ -66,19 +65,19 @@ export default function Navbar() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Panthers
+              Sam
             </span>
             <span className="text-white ml-1">Fitness</span>
           </span>
         </div>
 
         {/* CENTER — Nav Links */}
-        <ul className="flex justify-center gap-10">
+        <ul className="flex justify-center gap-8">
           {navLinks.map((id) => (
             <li
               key={id}
               onClick={() => scrollToSection(id)}
-              className="relative cursor-pointer text-sm font-semibold tracking-[2px] uppercase text-white/70 hover:text-white transition-colors duration-300 group"
+              className="relative cursor-pointer text-sm font-semibold tracking-[2px] uppercase text-white/70 hover:text-white transition-colors duration-300 group whitespace-nowrap"
             >
               {id}
               <span
@@ -95,7 +94,7 @@ export default function Navbar() {
         <div className="flex justify-end">
           <button
             onClick={() => scrollToSection("contact")}
-            className="relative px-7 py-2.5 text-sm font-bold tracking-[2px] uppercase text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,45,0,0.5)]"
+            className="relative px-7 py-2.5 text-sm font-bold tracking-[2px] uppercase text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,45,0,0.5)] whitespace-nowrap"
             style={{
               background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
               clipPath:
@@ -107,14 +106,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE NAV — Top bar */}
-      <div className="md:hidden flex justify-between items-center px-6 py-4">
+      {/* MOBILE + TABLET NAV — shown below lg (covers phones + all iPads) */}
+      <div className="lg:hidden flex justify-between items-center px-5 sm:px-8 py-4">
         <div
           onClick={() => scrollToSection("home")}
           className="flex items-center gap-2.5 cursor-pointer"
         >
           <div
-            className="w-8 h-8 flex items-center justify-center text-white font-black text-sm"
+            className="w-8 h-8 flex items-center justify-center text-white font-black text-sm flex-shrink-0"
             style={{
               background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
               clipPath:
@@ -128,7 +127,7 @@ export default function Navbar() {
               fontFamily: "'Bebas Neue', sans-serif",
               letterSpacing: "2px",
             }}
-            className="text-xl"
+            className="text-xl sm:text-2xl whitespace-nowrap"
           >
             <span
               style={{
@@ -139,14 +138,15 @@ export default function Navbar() {
             >
               Panthers
             </span>
-            <span className="text-white ml-1">Fit</span>
+            <span className="text-white ml-1">Fitness</span>
           </span>
         </div>
 
         {/* Hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex flex-col justify-center items-center w-9 h-9 gap-1.5 group"
+          className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 flex-shrink-0"
+          aria-label="Toggle menu"
         >
           <span
             className={`block h-0.5 w-6 bg-white transition-all duration-300 origin-center ${
@@ -166,10 +166,10 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE — Dropdown Menu */}
+      {/* MOBILE + TABLET — Dropdown Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ${
-          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{
           background: "rgba(10,10,10,0.98)",
@@ -185,16 +185,16 @@ export default function Navbar() {
           }}
         />
 
-        <ul className="px-6 py-6 space-y-1">
+        <ul className="px-6 sm:px-10 py-4 space-y-1">
           {navLinks.map((id, i) => (
             <li
               key={id}
               onClick={() => scrollToSection(id)}
-              className="flex items-center gap-3 cursor-pointer py-3 border-b border-white/5 group"
+              className="flex items-center gap-3 cursor-pointer py-3.5 border-b border-white/5 group"
               style={{ animationDelay: `${i * 60}ms` }}
             >
               <span
-                className="w-1 h-4 rounded-full transition-all duration-300 group-hover:h-6"
+                className="w-1 h-4 rounded-full transition-all duration-300 group-hover:h-6 flex-shrink-0"
                 style={{
                   background: "linear-gradient(180deg, #ff2d00, #ff6b00)",
                 }}
@@ -206,10 +206,10 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="px-6 pb-6">
+        <div className="px-6 sm:px-10 pb-6 pt-2">
           <button
             onClick={() => scrollToSection("contact")}
-            className="w-full py-3.5 text-sm font-bold tracking-[2px] uppercase text-white transition-all duration-300 hover:shadow-[0_8px_24px_rgba(255,45,0,0.4)]"
+            className="w-full py-4 text-sm font-bold tracking-[2px] uppercase text-white transition-all duration-300 hover:shadow-[0_8px_24px_rgba(255,45,0,0.4)] active:scale-95"
             style={{
               background: "linear-gradient(135deg, #ff2d00, #ff6b00)",
               clipPath:

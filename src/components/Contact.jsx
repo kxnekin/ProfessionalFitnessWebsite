@@ -112,8 +112,8 @@ export default function Contact() {
 
         {/* Two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          {/* LEFT — Info */}
-          <div className="space-y-8">
+          {/* LEFT — Info — second on mobile, first on desktop */}
+          <div className="space-y-8 order-2 md:order-1">
             <p className="text-white/50 text-sm leading-relaxed">
               Ready to transform your body and life? Fill out the form and one
               of our coaches will reach out to build your personalized plan.
@@ -179,8 +179,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT — Form */}
-          <div className="relative">
+          {/* RIGHT — Form — first on mobile, second on desktop */}
+          <div className="relative order-1 md:order-2">
             <div
               className="absolute inset-0 rounded-sm blur-xl opacity-20 pointer-events-none"
               style={{
@@ -227,7 +227,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* ✅ NEW: Email Field */}
               <div>
                 <label className="block text-[10px] font-bold tracking-[2px] uppercase text-white/30 mb-2">
                   Email Address
@@ -276,7 +275,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 text-sm font-black tracking-[3px] uppercase text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,45,0,0.4)] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 text-sm font-black tracking-[3px] uppercase text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,45,0,0.4)] disabled:opacity-50 disabled:cursor-not-allowed active:scale-95"
                 style={{
                   background: loading
                     ? "rgba(255,45,0,0.4)"

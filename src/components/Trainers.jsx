@@ -109,7 +109,6 @@ export default function Trainers() {
               <div className="p-8 flex flex-col items-center text-center relative">
                 {/* Avatar */}
                 <div className="relative mb-6">
-                  {/* Outer ring */}
                   <div
                     className={`w-24 h-24 rounded-full p-[2px] bg-gradient-to-br ${t.accent}`}
                   >
@@ -127,8 +126,6 @@ export default function Trainers() {
                       </span>
                     </div>
                   </div>
-
-                  {/* Online dot */}
                   <span className="absolute bottom-1 right-1 w-3.5 h-3.5 rounded-full bg-green-500 border-2 border-[#0f0f0f]" />
                 </div>
 
@@ -194,8 +191,13 @@ export default function Trainers() {
                   ))}
                 </div>
 
-                {/* CTA */}
+                {/* ✅ CTA — scrolls to contact */}
                 <button
+                  onClick={() =>
+                    document
+                      .getElementById("contact")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                   className="mt-6 w-full py-3 text-[11px] font-black tracking-[3px] uppercase text-white/60 border border-white/10 rounded-sm transition-all duration-300 group-hover:border-red-600/50 group-hover:text-white group-hover:bg-red-950/20"
                   style={{
                     clipPath:
